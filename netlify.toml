@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = "dist"
 
+# Public Supabase browser config (bundled into client JS anyway). Never put
+# service_role / sb_secret_ keys here — those belong in Supabase Edge Function secrets.
+[build.environment]
+  VITE_SUPABASE_URL = "https://nhnditfmtobvfpwjlbos.supabase.co"
+  VITE_SUPABASE_PUBLISHABLE_KEY = "sb_publishable_BtpvMZ2NYDszISxU56C7cg_bF7lh9xb"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
